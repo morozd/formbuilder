@@ -6,14 +6,14 @@ Formbuilder is a graphical interface for letting users build their own webforms.
 *As of right now, Formbuilder only handles the client-side logic of creating a form. It will output a structured JSON representation of your form, but saving the form, rendering it on the server, and storing users' responses is all up to you. I'm planning on releasing a Rails gem to handle this logic, but the ETA on that is pretty up in the air. If you'd like to help, feel free to reach out.*
 
 ## Demo
-[Click here](#) to see Formbuilder in action.
+[Click here](http://dobtco.github.io/formbuilder/) to see Formbuilder in action.
 
 ## Basic usage
 ```
-<div class='fb-main'></div>
+<div id='formbuilder'></div>
 
 <script>
-var fb = new Formbuilder('.fb-main');
+var formbuilder = new Formbuilder('#formbuilder');
 </script>
 ```
 
@@ -38,9 +38,9 @@ More coming soon...
 
 #### `save`
 ```
-var fb = new Formbuilder('#fb');
+var builder = new Formbuilder('#formbuilder');
 
-fb.on('save', function(payload){
+builder.on('save', function(payload){
   ...
 });
 ```
@@ -50,3 +50,7 @@ fb.on('save', function(payload){
 2. `bower install`
 3. `grunt watch`
 4. open `example/index.html` and you're all set!
+
+## License
+
+MIT
