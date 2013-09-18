@@ -1,7 +1,7 @@
 Formbuilder.registerField 'text',
 
   view: """
-    <input type='text' class='rf-size-<%= rf.get('field_options.size') %>' />
+    <input type='text' class='rf-size-<%= rf.get(Formbuilder.options.mappings.SIZE) %>' />
   """
 
   edit: """
@@ -12,3 +12,7 @@ Formbuilder.registerField 'text',
   addButton: """
     <span class='symbol'><span class='icon-font'></span></span> Text
   """
+
+  defaultAttributes: (attrs) ->
+    attrs.field_options.size = 'small'
+    attrs
